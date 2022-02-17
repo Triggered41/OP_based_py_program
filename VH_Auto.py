@@ -1,13 +1,12 @@
 import os
 import os.path
-from os import path
 
 while 1:
     print("\n                                   ========== Choose from the following options ==========")
     print("""
              option 00: Exit.
              option 01: Run any CMD command.
-             option 02: Task Manager.
+             option 02: See all the runing processes.
              option 03: Clear Screen.
              option 04: Check IP address.
              option 05: Check current Date.
@@ -17,6 +16,7 @@ while 1:
              option 09: Create a timer.
              option 10: Open firefox installed in your pc.
              option 11: print some text on screen.
+             option 12: Create and/or Open an existing file
 
              ========================================================================================
 
@@ -36,7 +36,7 @@ while 1:
         cm = str(input())
         os.system(cm)
     elif (choice == 2):
-        os.system("taskmgr")
+        os.system("tasklist")
     elif (choice == 3):
         os.system("cls")
     elif (choice == 4):
@@ -67,6 +67,16 @@ while 1:
         print(text)
         print("\nPress Enter to continue...")
         input()
+    elif (choice == 12):
+        filename = str(input())
+        if (os.path.exists(filename)):
+            print("Opening the file...")
+            os.system(filename)
+        else:
+            print("Creating the file...")
+            os.system("type nul > " + filename)
+            print(filename + " Created...")
+            os.system(filename)
     else :
         print("No such Option exist please choose a valid option")
         print("Press Enter to conitnue...")
