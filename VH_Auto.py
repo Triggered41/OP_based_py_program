@@ -2,8 +2,8 @@ import os
 import os.path
 
 while 1:
-    print("\n                                   ========== Choose from the following options ==========")
-    print("""
+    print(" \n                                   ========== Choose from the following options ==========")
+    print("""`
              option 00: Exit.
              option 01: Run any CMD command.
              option 02: See all the runing processes.
